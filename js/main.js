@@ -20,13 +20,20 @@ const loadAllCategory = () => {
 };
 
 const showCategory = datas => {
-  const categoryDiv = getId("categoryDiv");
 
-  categoryDiv.innerHTML = `<span onclick="loadAllProducts(this)" class="text-lg hover:bg-green-800 hover:text-white px-3 py-1 rounded-sm block cursor-pointer active">All Trees</span>`;
+  // const categoryDiv = getId("categoryDiv");
+  const categoryDiv = document.querySelectorAll(".categoryDiv");
 
-  datas.forEach((data) => {
-    categoryDiv.innerHTML += `<span onclick="loadCategoryProduct(${data.id},this)" class="text-lg hover:bg-green-800 hover:text-white px-3 py-1 rounded-sm block cursor-pointer">${data.category_name}</span>`;
-  });
+  for (const div of categoryDiv) {
+    
+    div.innerHTML = `<span onclick="loadAllProducts(this)" class="text-lg border border-green-300 hover:bg-green-800 hover:text-white px-3 py-1 rounded-sm block cursor-pointer active">All Trees</span>`;
+  
+    datas.forEach((data) => {
+      div.innerHTML += `<span onclick="loadCategoryProduct(${data.id},this)" class="text-lg border border-green-300 hover:bg-green-800 hover:text-white px-3 py-1 rounded-sm block cursor-pointer">${data.category_name}</span>`;
+    });
+
+  }
+
 };
 
 const loadingFun = status => {
@@ -99,7 +106,7 @@ const showProducts = datas => {
                   >${data.price}</span
                 >
               </div>
-              <button onclick="addToCart(${data.id})" class="btn bg-green-800 rounded-4xl border-none py-1">
+              <button onclick="addToCart(${data.id})" class="btn bg-green-700 hover:bg-green-800 rounded-4xl border-none py-1">
                 Add to Cart
               </button>
             </div>
@@ -162,7 +169,7 @@ const showCart = () => {
       
 
       cartDiv.innerHTML += `
-    <div class="flex justify-between items-center">
+    <div class="flex justify-between items-center bg-green-200 p-2">
           <div class="">
             <h2 class="text-lg font-medium">${plant.name}</h2>
             <span class="text-gray-500 text-base"

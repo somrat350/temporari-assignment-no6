@@ -19,7 +19,7 @@
   </head>
   <body class="relative text-black bg-green-100">
     <!---------- Header ---------->
-    <header class="sticky top-0 px-5 py-5 bg-green-800 text-white">
+    <header class="sticky top-0 px-5 py-5 bg-green-800 text-white z-[100]">
       <nav class="flex justify-between items-center h-full relative">
         <div class="logo">
           <a href="" class="text-2xl font-semibold">Green Earth</a>
@@ -73,14 +73,16 @@
       <div
         class="max-w-2xl pb-14 mx-auto flex flex-col gap-3 justify-center items-center"
       >
-        <h2 class="text-4xl text-center font-semibold">
+        <h2 class="text-3xl sm:text-4xl text-center font-semibold">
           Plant a Tree, Grow a Future
         </h2>
         <p class="text-lg text-center">
           Join our mission to plant 1 million trees and make the Earth greener
           for future generations.
         </p>
-        <a href="" class="text-green-800 bg-yellow-400 px-4 py-2 rounded-4xl font-semibold"
+        <a
+          href=""
+          class="text-green-800 bg-yellow-400 px-4 py-2 rounded-4xl font-semibold"
           >Get Involved</a
         >
       </div>
@@ -96,13 +98,19 @@
       <h2 class="text-center text-4xl font-semibold">Choose Your Trees</h2>
 
       <div class="mt-10 grid grid-cols-7 lg:grid-cols-6 gap-3">
-        <div class="col-span-full lg:col-span-1">
+        <div class="col-span-full lg:col-span-1 mb-10">
           <h2 class="mb-5 text-2xl font-medium hidden lg:block">Categories</h2>
 
-          <div
-            id="categoryDiv"
-            class="flex flex-wrap justify-center lg:flex-col gap-1"
-          ></div>
+          <div class="categoryDiv hidden lg:flex lg:flex-col gap-1"></div>
+
+          <div class="dropdown lg:hidden w-full z-[1]">
+            <div tabindex="0" role="button" class="btn w-full m-1 bg-white text-black border-2 border-green-800">Search by categories <i class="fa-solid fa-arrow-down sm:hidden"></i></div>
+            <ul
+              tabindex="0"
+              class="categoryDiv dropdown-content menu rounded-box z-1 w-60 p-2 shadow-sm gap-1 bg-white"
+            ></ul>
+          </div>
+
         </div>
 
         <div
@@ -147,12 +155,11 @@
     <!---------- Small cart icon ---------->
     <section
       onclick="showSmallCart()"
-      class="fixed bottom-10 right-2 sm:hidden bg-white p-3 rounded-lg"
+      class="fixed bottom-10 right-2 sm:hidden bg-white p-3 rounded-lg z-50"
     >
-      <i
-        class="fa-solid fa-cart-shopping text-3xl text-red-500 cursor-pointer relative"
-      >
-        <span id="cartCount"
+      <i class="fa-solid fa-cart-shopping text-3xl text-red-500 cursor-pointer relative">
+        <span
+          id="cartCount"
           class="absolute -top-2 -right-2 text-white bg-green-500 px-2 py-1 text-xs text-center rounded-[50%] font-bold"
           >0</span
         >
@@ -162,7 +169,7 @@
     <!---------- Small cart section ---------->
     <section
       id="smallCartSec"
-      class="fixed top-20 right-2 bg-white w-full h-10/12 max-w-60 rounded-lg p-3 hidden"
+      class="fixed top-20 right-2 bg-white w-full h-10/12 max-w-60 rounded-lg py-5 px-3 z-20 overflow-auto hidden"
     >
       <div class="flex justify-between items-center">
         <h2 class="font-semibold text-2xl">Your Cart</h2>
@@ -170,7 +177,7 @@
       </div>
 
       <div
-        class="cartDiv mt-5 flex flex-col gap-3 max-h-[400px] overflow-y-auto"
+        class="cartDiv mt-5 flex flex-col gap-3"
       ></div>
 
       <div class="mt-5 flex justify-between items-center">
@@ -257,10 +264,10 @@
           class="input w-full bg-white"
         />
         <select class="select w-full bg-white">
-          <option disabled selected>Pick a color</option>
-          <option>Crimson</option>
-          <option>Amber</option>
-          <option>Velvet</option>
+          <option disabled selected>Number of trees</option>
+          <option>1 Tree - $5</option>
+          <option>5 Tree - $25</option>
+          <option>10 Tree - $50</option>
         </select>
         <button class="btn btn-warning rounded-4xl text-green-800">
           Donate Now
