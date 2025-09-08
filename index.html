@@ -19,7 +19,7 @@
   </head>
   <body class="relative text-black bg-green-100">
     <!---------- Header ---------->
-    <header class="sticky top-0 px-8 py-5 bg-green-800 text-white">
+    <header class="sticky top-0 px-5 py-5 bg-green-800 text-white">
       <nav class="flex justify-between items-center h-full relative">
         <div class="logo">
           <a href="" class="text-2xl font-semibold">Green Earth</a>
@@ -64,7 +64,7 @@
     </header>
 
     <!---------- Hero ---------->
-    <section class="px-8 pt-14 bg-green-200 flex justify-between gap-5">
+    <section class="px-5 pt-14 bg-green-200 flex justify-between gap-5">
       <img
         src="assets/hero-leaf1.png"
         alt=""
@@ -92,7 +92,7 @@
     </section>
 
     <!---------- Main product ---------->
-    <section class="px-10 sm:px-8 py-14">
+    <section class="px-5 py-14">
       <h2 class="text-center text-4xl font-semibold">Choose Your Trees</h2>
 
       <div class="mt-10 grid grid-cols-7 lg:grid-cols-6 gap-3">
@@ -147,13 +147,13 @@
     <!---------- Small cart icon ---------->
     <section
       onclick="showSmallCart()"
-      class="fixed bottom-10 right-2 sm:hidden"
+      class="fixed bottom-10 right-2 sm:hidden bg-white p-3 rounded-lg"
     >
       <i
-        class="fa-solid fa-cart-shopping text-xl text-red-500 cursor-pointer relative"
+        class="fa-solid fa-cart-shopping text-3xl text-red-500 cursor-pointer relative"
       >
         <span id="cartCount"
-          class="absolute -top-2 -right-1 text-red-500 bg-green-500 p-1 text-[8px] text-center rounded-[50%] font-bold"
+          class="absolute -top-2 -right-2 text-white bg-green-500 px-2 py-1 text-xs text-center rounded-[50%] font-bold"
           >0</span
         >
       </i>
@@ -162,7 +162,7 @@
     <!---------- Small cart section ---------->
     <section
       id="smallCartSec"
-      class="fixed top-20 right-2 bg-white w-full max-w-60 rounded-lg p-3 hidden"
+      class="fixed top-20 right-2 bg-white w-full h-10/12 max-w-60 rounded-lg p-3 hidden"
     >
       <div class="flex justify-between items-center">
         <h2 class="font-semibold text-2xl">Your Cart</h2>
@@ -170,7 +170,7 @@
       </div>
 
       <div
-        class="cartDiv mt-5 flex flex-col gap-3 max-h-[480px] overflow-y-auto"
+        class="cartDiv mt-5 flex flex-col gap-3 max-h-[400px] overflow-y-auto"
       ></div>
 
       <div class="mt-5 flex justify-between items-center">
@@ -183,7 +183,7 @@
     </section>
 
     <!---------- About ---------->
-    <section class="px-8 py-14">
+    <section class="px-5 py-14">
       <h2 class="text-center text-3xl font-semibold">About the Campaign</h2>
       <div class="mt-5 grid md:grid-cols-2 gap-5">
         <div class="flex justify-center items-center">

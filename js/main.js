@@ -143,8 +143,9 @@ const cartCountFun = () => {
 const addToCart = async id => {
   const url = `https://openapi.programming-hero.com/api/plant/${id}`;
   const plant = await fetch(url).then(res=>res.json()).then(plant=>plant.plants)
+  alert(`${plant.name} has been added to the cart.`);
   cart.push(plant);
-  showCart(cart);
+  showCart();
 }
 
 const showCart = () => {
