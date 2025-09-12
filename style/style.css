@@ -1,0 +1,25 @@
+
+.btn:hover{
+    background-color: green;
+    
+}
+.tall-btn{
+    padding: 2px;
+    
+    
+    width: 100%;
+    
+
+
+}
+.tall-btn:hover{
+    background-color: green;
+}
+.btn{
+  width:100%;   
+}
+
+.active{
+    color: white;
+    background-color: green;
+}
