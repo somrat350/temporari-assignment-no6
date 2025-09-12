@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Green Earth</title>
+
+
+    <!-- font awesome -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- deysiUi -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@5"
@@ -16,12 +21,14 @@
     <link rel="shortcut icon" href="./tree.png" type="image/x-icon" />
   </head>
   <body>
-    <header class="mx-auto px-4 w-full">
-      <div class="navbar bg-green-600 shadow-sm">
+    <header class="mx-auto px-4 w-full bg-green-600">
+      <div class="navbar shadow-sm">
+
         <div class="navbar-start">
           <div class="dropdown"></div>
           <h3 class="text-lg font-semibold text-white">Green Earth</h3>
         </div>
+
         <div class="navbar-center hidden lg:flex">
           <ul class="menu menu-horizontal px-1">
             <li class="text-white"><a>About</a></li>
@@ -29,11 +36,11 @@
             <li class="text-white"><a>Plant a tree</a></li>
           </ul>
         </div>
-        <div class="navbar-end">
-          <a class="btn rounded-xl text-green-600 bg-yellow-300"
-            >Plant a tree</a
-          >
+
+        <div class="navbar-end flex justify-end">
+          <a class="btn rounded-xl text-green-600 bg-yellow-300">Plant a tree</a>
         </div>
+
       </div>
     </header>
 
@@ -61,21 +68,16 @@
 
       <section class="bg-sky-100 pt-20">
         <div class="grid grid-cols-6 gap-2">
-          <div class="col-span-1">
+
+          <div class="col-span-full lg:col-span-1">
             <h2 class="text-xl font-semibold mb-5">Categories</h2>
 
-            <div id="category-level" class="flex flex-col gap-1"></div>
+            <div id="category-level" class="flex flex-wrap sm:flex-col gap-1"></div>
           </div>
 
-          <!-- 
-          <div
-            id="plant-container"
-            class="grid grid-cols-3 gap-x-5 gap-y-5 mx-auto"
-          ></div> -->
+          <div class="col-span-full sm:col-span-4 lg:col-span-4 grid md:grid-cols-2 xl:grid-cols-3 gap-2" id="allPlantContainer"></div>
 
-          <div class="col-span-4 grid grid-cols-3 gap-2" id="allPlantContainer"></div>
-
-          <div class="col-span-1">
+          <div class="col-span-full sm:col-span-2 lg:col-span-1">
             <p class="font-semibold mr-20">Your cart</p>
           </div>
         </div>

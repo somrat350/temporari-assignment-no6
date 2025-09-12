@@ -27,9 +27,9 @@ const diplayLoadPlant = (plants) => {
         <p class="">${plant.description}</p>
           <div class="flex justify-between mt-2">
             <p class="font-semibold">${plant.category}</p>
-            <p class="font-semibold">${plant.price}</p>
+            <p class="font-semibold"><i class="fa-solid fa-bangladeshi-taka-sign"></i> ${plant.price}</p>
             </div>
-            <button class="bg-green-900 p-1 rounded-2xl w-full mt-2 text-white hover:bg-sky-300">Add to Cart</button>
+            <button class="bg-green-800 p-1 rounded-2xl w-full mt-2 text-white hover:bg-green-950 cursor-pointer">Add to Cart</button>
           </div>
        
       `;
